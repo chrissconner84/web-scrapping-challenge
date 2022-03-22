@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1 class="jumbotron">Mission to Mars</h1>
+    <div>
+      <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars!</a>
+      <h1>Welcome to my Mission to Mars Page</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box skyblue"></div>
+          <h2>Latest Mars New</h2>
+          <h3>{{data.m2mtitle}}</h3>
+          <p>{{data.newstext}}</p>
+        </div>
+        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box skyblue"></div>
+          <h2>Mars Featured Image</h2>
+          <img src="{{ data.fi_url }}" alt="Mars Image"></a>
+          
+        </div>
+        <div class="col-md-4">
+          <div class="box skyblue"></div>
+          <h2>Mars Facts</h2>
+          <thead>{{data.html_table|safe}}</thead>
+          
+      </div>
+      <h2>Mars Hemispheres</h2>  
+      <div class="row">
+        <div class="col-md-3">
+          <div class="box skyblue"></div>
+          <div class="card" style="width: 18rem;">
+            <img src="{{data.image_url1}}" class="card-img-top" alt="Cerberus">
+            <div class="card-body">
+              <p class="card-text">{{data.title1}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box skyblue"></div>
+          <div class="card" style="width: 18rem;">
+            <img src="{{data.image_url2}}" class="card-img-top" alt="Schiaparelli">
+            <div class="card-body">
+              <p class="card-text">{{data.title2}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box skyblue"></div>
+          <div class="card" style="width: 18rem;">
+            <img src="{{data.image_url3}}" class="card-img-top" alt="Syrtis">
+            <div class="card-body">
+              <p class="card-text">{{ data.title3}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box skyblue"></div>
+          <div class="card" style="width: 18rem;">
+            <img src="{{ data.image_url4 }}" class="card-img-top" alt="Valles">
+            <div class="card-body">
+              <p class="card-text">{{data.title4}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</body>
+
+</html>
